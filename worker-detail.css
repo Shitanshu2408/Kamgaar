@@ -1,0 +1,265 @@
+body {
+  background: #f4f6fa;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 40px;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  height: 45px;
+}
+
+.detail-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.detail-card {
+  background: white;
+  width: 380px;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.detail-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #003b7a;
+  margin-bottom: 15px;
+}
+
+.detail-info p {
+  margin: 8px 0;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+/* =========================
+   GLOBAL RESPONSIVE FIXES
+========================= */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  width: 100%;
+}
+
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/* =========================
+   LARGE SCREENS (4K+)
+========================= */
+@media (min-width: 1600px) {
+  .section,
+  .why-section,
+  .about-section,
+  .team-section {
+    padding: 100px 180px;
+  }
+
+  .hero h1 {
+    font-size: 56px;
+  }
+
+  .hero p {
+    font-size: 22px;
+  }
+}
+
+/* =========================
+   DESKTOP / LAPTOP
+========================= */
+@media (max-width: 1200px) {
+  .section,
+  .why-section,
+  .about-section,
+  .team-section {
+    padding: 70px 60px;
+  }
+
+  .workflow-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   TABLETS (LANDSCAPE)
+========================= */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 15px 25px;
+  }
+
+  .navbar nav a {
+    margin-left: 14px;
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .career-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .team-slider {
+    gap: 20px;
+  }
+}
+
+/* =========================
+   TABLETS (PORTRAIT)
+========================= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .navbar nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 70px 20px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .section,
+  .why-section,
+  .about-section,
+  .team-section {
+    padding: 60px 30px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-grid {
+    gap: 20px;
+  }
+
+  .about-box {
+    padding: 30px;
+  }
+
+  .team-card {
+    min-width: 200px;
+  }
+
+  .footer-extended {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+/* =========================
+   MOBILE (STANDARD)
+========================= */
+@media (max-width: 576px) {
+  .navbar nav a {
+    font-size: 13px;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .why-card,
+  .team-card,
+  .level {
+    padding: 22px;
+  }
+
+  .about-box p {
+    font-size: 16px;
+  }
+
+  .team-slider {
+    padding-bottom: 15px;
+  }
+
+  .footer-box input,
+  .footer-box button {
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   SMALL / LOW-END MOBILES
+========================= */
+@media (max-width: 420px) {
+  .hero h1 {
+    font-size: 23px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .why-card h3 {
+    font-size: 16px;
+  }
+
+  .about-box p {
+    font-size: 15px;
+  }
+
+  .team-card h3 {
+    font-size: 15px;
+  }
+
+  .team-card p {
+    font-size: 13px;
+  }
+}
+
+

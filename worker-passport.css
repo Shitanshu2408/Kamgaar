@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 40px;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  height: 45px;
+}
+
+.header h1 {
+  color: #003b7a;
+}
+
+/* Sliding Text */
+.passport-ticker {
+  background: #e6f3ff;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 12px 0;
+  border-bottom: 1px solid #cce0f5;
+}
+
+.ticker-text {
+  display: inline-block;
+  padding-left: 100%;
+  color: #003b7a;
+  font-weight: 600;
+  animation: slide 18s linear infinite;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Passport Cards */
+.passport-list {
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.passport-card {
+  display: flex;
+  gap: 20px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  align-items: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.passport-card:hover {
+  transform: translateY(-4px);
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #003b7a;
+}
+
+.passport-info h3 {
+  color: #003b7a;
+  margin-bottom: 5px;
+}
+
+.summary {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.passport-info p {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.performance {
+  margin-top: 8px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.level {
+  background: #003b7a;
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+
+/* Sliding Text */
+.passport-ticker {
+  background: #e6f3ff;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 12px 0;
+  border-bottom: 1px solid #cce0f5;
+}
+
+.ticker-text {
+  display: inline-block;
+  padding-left: 100%;
+  font-weight: 600;
+  color: #003b7a;
+  animation: slide 18s linear infinite;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+.verified {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #1b7e1b;
+  font-weight: 600;
+}
+
+.verified::before {
+  content: "✔ ";
+}
+
+.view-btn {
+  margin-top: 10px;
+  padding: 6px 14px;
+  background: #ff8a5b;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-btn:hover {
+  background: #003b7a;
+  transform: translateY(-2px);
+}
+
+.logo {
+  cursor: pointer;
+}
+/* =========================
+   GLOBAL RESPONSIVE FIXES
+========================= */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  width: 100%;
+}
+
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/* =========================
+   LARGE SCREENS (4K+)
+========================= */
+@media (min-width: 1600px) {
+  .section,
+  .why-section,
+  .about-section,
+  .team-section {
+    padding: 100px 180px;
+  }
+
+  .hero h1 {
+    font-size: 56px;
+  }
+
+  .hero p {
+    font-size: 22px;
+  }
+}
+
+/* =========================
+   DESKTOP / LAPTOP
+========================= */
+@media (max-width: 1200px) {
+  .section,
+  .why-section,
+  .about-section,
+  .team-section {
+    padding: 70px 60px;
+  }
+
+  .workflow-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   TABLETS (LANDSCAPE)
+========================= */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 15px 25px;
+  }
+
+  .navbar nav a {
+    margin-left: 14px;
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .career-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .team-slider {
+    gap: 20px;
+  }
+}
+
+/* =========================
+   TABLETS (PORTRAIT)
+========================= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .navbar nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 70px 20px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .section,
+  .why-section,
+  .about-section,
+  .team-section {
+    padding: 60px 30px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-grid {
+    gap: 20px;
+  }
+
+  .about-box {
+    padding: 30px;
+  }
+
+  .team-card {
+    min-width: 200px;
+  }
+
+  .footer-extended {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+/* =========================
+   MOBILE (STANDARD)
+========================= */
+@media (max-width: 576px) {
+  .navbar nav a {
+    font-size: 13px;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .why-card,
+  .team-card,
+  .level {
+    padding: 22px;
+  }
+
+  .about-box p {
+    font-size: 16px;
+  }
+
+  .team-slider {
+    padding-bottom: 15px;
+  }
+
+  .footer-box input,
+  .footer-box button {
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   SMALL / LOW-END MOBILES
+========================= */
+@media (max-width: 420px) {
+  .hero h1 {
+    font-size: 23px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .why-card h3 {
+    font-size: 16px;
+  }
+
+  .about-box p {
+    font-size: 15px;
+  }
+
+  .team-card h3 {
+    font-size: 15px;
+  }
+
+  .team-card p {
+    font-size: 13px;
+  }
+}

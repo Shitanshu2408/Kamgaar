@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Worker Dashboard | Kamgaar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a href="../index.html" class="brand">
+    <img src="../logo.png" alt="Kamgaar Logo" class="logo">
+   
+  </a>
+
+  <button onclick="logout()">Logout</button>
+
+</header>
+
+<section class="dashboard">
+  <h1>Welcome, Worker 👷‍♂️</h1>
+  <p class="subtitle">Your work, growth, and passport — all in one place</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>My Worker Passport</h3>
+      <p>View your experience, level, and ratings</p>
+      <a href="../worker-passport.html">Open Passport</a>
+    </div>
+
+    <div class="card">
+      <h3>Available Jobs</h3>
+      <p>Find active requirements near you</p>
+      <a href="../kamgaar-findJobs.html">Find Jobs</a>
+    </div>
+
+    <div class="card">
+      <h3>My Bookings</h3>
+      <p>Track confirmed assignments & attendance</p>
+      <span class="disabled">Coming Soon</span>
+    </div>
+
+    <div class="card">
+      <h3>Career Level</h3>
+      <p>Current Level: <strong>Level 2</strong></p>
+      <span class="badge">Growth Path</span>
+    </div>
+  </div>
+</section>
+
+<script type="module" src="dashboard.js"></script>
+
+</body>
+</html>

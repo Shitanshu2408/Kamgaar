@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login | Kamgaar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="login.css" />
+</head>
+
+<body>
+
+<section class="login-wrapper">
+
+  <!-- Logo -->
+ <a href="/index.html">
+  <img src="/logo.png" alt="Kamgaar Logo" class="login-logo">
+</a>
+
+
+  <h1>Login to Kamgaar</h1>
+  <p class="subtitle">Choose your role and continue</p>
+
+  <div class="login-grid">
+
+    <!-- ================= CONTRACTOR CARD ================= -->
+    <div class="login-card">
+      <h2>Contractor</h2>
+      <p>Hire & manage skilled operators</p>
+
+      <div class="auth-section">
+        <button class="google-btn"
+          onclick="startLogin('contractor','google')">
+          Continue with Google
+        </button>
+
+        <p class="or">OR</p>
+
+        <input id="contractor-phone" placeholder="+91XXXXXXXXXX" />
+        <button class="otp-btn" onclick="sendOTP('contractor')">
+          Send OTP
+        </button>
+
+        <input id="contractor-otp" placeholder="Enter OTP" />
+        <button onclick="verifyOTP('contractor')">
+          Verify OTP
+        </button>
+      </div>
+    </div>
+
+    <!-- ================= WORKER CARD ================= -->
+    <div class="login-card">
+      <h2>Worker</h2>
+      <p>Find jobs & manage your worker passport</p>
+
+      <div class="auth-section">
+        <button class="google-btn"
+          onclick="startLogin('worker','google')">
+          Continue with Google
+        </button>
+
+        <p class="or">OR</p>
+
+        <input id="worker-phone" placeholder="+91XXXXXXXXXX" />
+        <button class="otp-btn" onclick="sendOTP('worker')">
+          Send OTP
+        </button>
+
+        <input id="worker-otp" placeholder="Enter OTP" />
+        <button onclick="verifyOTP('worker')">
+          Verify OTP
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- REQUIRED FOR PHONE AUTH -->
+  <div id="recaptcha-container"></div>
+
+</section>
+
+<script type="module" src="auth.js"></script>
+</body>
+</html>

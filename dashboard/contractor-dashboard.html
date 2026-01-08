@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contractor Dashboard | Kamgaar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a href="../index.html" class="brand">
+    <img src="../logo.png" alt="Kamgaar Logo" class="logo">
+  </a>
+
+  <button onclick="logout()">Logout</button>
+
+</header>
+
+<section class="dashboard">
+  <h1>Welcome, Contractor 🏗️</h1>
+  <p class="subtitle">Manage workforce, bookings, and compliance</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>Post Requirement</h3>
+      <p>Create workforce needs for your project</p>
+      <a href="#">Post Job</a>
+    </div>
+
+    <div class="card">
+      <h3>Find Skilled Workers</h3>
+      <p>Verified operators with digital passports</p>
+      <a href="../kamgaar-skilledWorkers.html">Find Workers</a>
+    </div>
+
+    <div class="card">
+      <h3>Active Bookings</h3>
+      <p>Manage ongoing deployments</p>
+      <span class="disabled">Coming Soon</span>
+    </div>
+
+    <div class="card">
+      <h3>Compliance & Attendance</h3>
+      <p>Zero paperwork headache</p>
+      <span class="badge">Managed by Kamgaar</span>
+    </div>
+  </div>
+</section>
+
+<script type="module" src="dashboard.js"></script>
+
+</body>
+</html>

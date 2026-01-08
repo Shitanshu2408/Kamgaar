@@ -10,14 +10,16 @@
 
 <!-- Navbar -->
 <header class="navbar">
-  <img src="logo.png" alt="Kamgaar Logo" class="logo" />
+  <img src="logo.png" alt="Kamgaar Logo" class="logo" onclick="location.href='index.html'" />
+
   <nav>
     <a href="#why">Why Kamgaar</a>
     <a href="#about">About Us</a>
-    <a href="#workflow">Workflow</a>
     <a href="#career">Career Path</a>
+    <a href="./auth/login.html" class="login-btn">Login</a>
   </nav>
 </header>
+
 
 <!-- Hero -->
 <section class="hero">
@@ -94,33 +96,78 @@
 
 <!-- ABOUT US -->
 <section id="about" class="about-section">
-  <h2>About Us</h2>
+  <h2>About Kamgaar</h2>
 
-  <div class="about-box">
+  <!-- PART 1: WHO WE ARE -->
+  <div class="about-block">
+    <h3>Who We Are</h3>
     <p>
-      Kamgaar is a B2B manpower infrastructure company built to bring structure,
-      reliability, and accountability to India’s unorganized workforce ecosystem.
+      Kamgaar is a workforce management company built exclusively for
+      heavy-equipment operators. We employ operators full-time, manage them
+      end-to-end, and deploy them to critical infrastructure, construction,
+      industrial, and mining projects across India.
     </p>
 
     <p>
-      We directly employ skilled operators, technicians, and support workers
-      and deploy them through long-term manpower supply contracts. By taking
-      complete responsibility for workforce management — including salary,
-      attendance, compliance, and continuity — we remove manpower risk from
-      business operations.
+      Heavy equipment cannot afford downtime — and neither can the businesses
+      that rely on it. Kamgaar exists to eliminate manpower uncertainty from
+      mission-critical operations.
+    </p>
+  </div>
+
+  <!-- PART 2: WHAT WE DO -->
+  <div class="about-block">
+    <h3>What We Do</h3>
+
+    <p><strong>We Employ Operators Full-Time</strong></p>
+    <p>
+      All operators on Kamgaar are hired as permanent employees. They receive
+      fixed salaries, formal employment contracts, PF, insurance, and statutory
+      benefits — creating stability, accountability, and long-term commitment.
     </p>
 
+    <p><strong>We Deploy Operators to Client Sites</strong></p>
     <p>
-      Kamgaar exists to create a system where businesses operate without workforce
-      uncertainty, and workers gain stable employment, dignity, and formal
-      recognition of their experience.
+      Our operators are deployed to EPCs, contractors, and equipment rental
+      companies based on the right skill, right machine, and right site
+      requirements. Clients get ready-to-work operators without the burden of
+      hiring, payroll, or compliance.
     </p>
+
+    <p><strong>We Guarantee Workforce Continuity</strong></p>
+    <p>
+      We provide SLA-backed replacements to ensure zero downtime for critical
+      equipment. If an operator is unavailable, Kamgaar manages rapid
+      replacement — so operations never stop.
+    </p>
+
+    <p><strong>We Manage the Entire Workforce Lifecycle</strong></p>
+    <p>
+      From recruitment and verification to payroll, compliance, attendance,
+      performance, and safety oversight — Kamgaar manages everything under one
+      accountable employer model.
+    </p>
+  </div>
+
+  <!-- PART 3: WHO WE WORK WITH -->
+  <div class="about-block">
+    <h3>Who We Work With</h3>
+    <p>
+      We partner with organizations where equipment uptime is non-negotiable:
+    </p>
+
+    <ul class="about-list">
+      <li>Infrastructure and construction companies</li>
+      <li>Equipment rental companies</li>
+      <li>Industrial and mining operators</li>
+    </ul>
 
     <p class="tagline">
-      Kamgaar — Building reliable workforces, together.
+      Kamgaar — Eliminating manpower risk from heavy equipment operations.
     </p>
   </div>
 </section>
+
 
 <section id="career" class="section light career-section">
   <div class="career-header">
@@ -155,37 +202,40 @@
   <h2>Meet Our Team</h2>
 
   <div class="team-slider">
+
     <div class="team-card">
-      <img src="">
+      <img src="./assests/team/ceo.jpeg" alt="Shivang Bisen - CEO">
       <h3>Shivang Bisen</h3>
       <p>CEO</p>
     </div>
 
     <div class="team-card">
-      <img src="">
+      <img src="./assests/team/cmo.jpeg" alt="Omkar Mutalik - CMO">
       <h3>Omkar Mutalik</h3>
       <p>CMO</p>
     </div>
 
     <div class="team-card">
-      <img src="">
+      <img src="./assests/team/cfo.jpeg" alt="Shivam Bhardwaj - CFO">
       <h3>Shivam Bhardwaj</h3>
       <p>CFO</p>
     </div>
 
     <div class="team-card">
-      <img src="">
+      <img src="./assests/team/coo.jpeg" alt="Omshree Patil - COO">
       <h3>Omshree Patil</h3>
       <p>COO</p>
     </div>
 
     <div class="team-card">
-      <img src="">
+      <img src="./assests/team/cto.jpeg" alt="Jaydev Tyagi - CTO">
       <h3>Jaydev Tyagi</h3>
       <p>CTO</p>
     </div>
+
   </div>
 </section>
+
 
 <!-- FOOTER -->
 <footer class="footer-extended">

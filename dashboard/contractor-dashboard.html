@@ -13,7 +13,9 @@
     <img src="../logo.png" alt="Kamgaar Logo" class="logo">
   </a>
 
-  <button onclick="logout()">Logout</button>
+  <button id="logoutBtn" class="logout-btn">
+  Logout
+</button>
 
 </header>
 
@@ -48,7 +50,10 @@
   </div>
 </section>
 
-<script type="module" src="dashboard.js"></script>
+<script type="module" src="../auth-guard.js"></script>
+<script type="module" src="./logout.js"></script>
+
+
 
 </body>
 </html>

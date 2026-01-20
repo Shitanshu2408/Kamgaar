@@ -1,3 +1,5 @@
+
+
 // Import Firebase Auth
 import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
@@ -35,3 +37,4 @@ onAuthStateChanged(auth, (user) => {
     window.location.href = "/auth/login.html";
   }
 });
+

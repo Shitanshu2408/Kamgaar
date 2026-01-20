@@ -10,6 +10,13 @@ import {
   signInWithPhoneNumber
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
+import {
+  getFirestore,
+  doc,
+  setDoc,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
 // ==============================
 // FIREBASE CONFIG
 // ==============================
@@ -27,6 +34,7 @@ const firebaseConfig = {
 // ==============================
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const db = getFirestore(app);
 const provider = new GoogleAuthProvider();
 
 // ==============================
@@ -36,13 +44,29 @@ let selectedRole = null;
 let confirmationResult = null;
 
 // ==============================
-// reCAPTCHA (ONLY ONCE)
+// reCAPTCHA (INIT ONCE)
 // ==============================
 window.recaptchaVerifier = new RecaptchaVerifier(
   auth,
   "recaptcha-container",
   { size: "normal" }
 );
+
+// ==============================
+// SAVE USER TO FIRESTORE
+// ==============================
+async function saveUserRole(role) {
+  const user = auth.currentUser;
+  if (!user) return;
+
+  await setDoc(doc(db, "users", user.uid), {
+    role: role,
+    name: user.displayName || "",
+    email: user.email || "",
+    phone: user.phoneNumber || "",
+    createdAt: serverTimestamp()
+  });
+}
 
 // ==============================
 // GOOGLE LOGIN
@@ -52,7 +76,10 @@ window.startLogin = function (role, method) {
 
   if (method === "google") {
     signInWithPopup(auth, provider)
-      .then(() => redirectUser())
+      .then(async () => {
+        await saveUserRole(selectedRole);
+        redirectUser();
+      })
       .catch(err => alert(err.message));
   }
 };
@@ -94,7 +121,10 @@ window.verifyOTP = function (role) {
   }
 
   confirmationResult.confirm(otpInput.value)
-    .then(() => redirectUser())
+    .then(async () => {
+      await saveUserRole(selectedRole);
+      redirectUser();
+    })
     .catch(() => alert("Invalid OTP"));
 };
 
